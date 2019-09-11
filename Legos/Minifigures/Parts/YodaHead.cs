@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Legos.Minifigures.Parts
 {
-    class YodaHead : Head
+    class YodaHead : Head, ITalker
     {
         /*public bool HasEars => true;*/
         public bool HasEars { get; private set; }
@@ -14,9 +14,14 @@ namespace Legos.Minifigures.Parts
             HasEars = true;
         }
 
-        public override void Talk()
+       /* public override void Talk()
         {
             Console.WriteLine("Talking head I am.");
+        }*/
+
+        public void Shout(int numberOfDecibels)
+        {
+
         }
 
         public void Battle()

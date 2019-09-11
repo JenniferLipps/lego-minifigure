@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Legos.Minifigures;
 using Legos.Minifigures.Parts;
 
@@ -36,8 +37,8 @@ namespace Legos
 
             var legs = new ZombieLegs();
 
-
-            var yodaYetiZombie = new Minifigure(head, torso, legs);
+            var drillsarge = new DrillSarge();
+            var yodaYetiZombie = new Minifigure(drillsarge, torso, legs);
             yodaYetiZombie.Battle();
 
             var fatHead = new FatHead();
@@ -46,6 +47,16 @@ namespace Legos
 
             var fatHeadedCentaurPirate = new Minifigure(fatHead, pirateTorso, centaurLegs);
             fatHeadedCentaurPirate.Battle();
+
+            var talkers = new List<ITalker>()
+            {
+                drillsarge,fatHead,head
+            };
+
+            foreach (var talker in talkers)
+            {
+                talker.Talk();
+            }
             
         }
     }
