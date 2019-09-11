@@ -5,7 +5,7 @@ using System.Text;
 namespace Legos.Minifigures.Parts
 {
     
-    abstract class Head
+    abstract class Head : ITalker
     {
         public int NumberOfEyes { get; set; }
         public string EyeColor { get; set; }
@@ -20,6 +20,8 @@ namespace Legos.Minifigures.Parts
         }
 
         public abstract void Think();
+
+        public abstract void Shout(int numberOfDecibels);
     }
 
    

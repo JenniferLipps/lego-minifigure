@@ -4,11 +4,11 @@ namespace Legos.Minifigures
 {
     class Minifigure
     {
-        readonly Head _head;
+        readonly ITalker _head; /*Using this instad of Head, this can be any class as long as it has Talk functionality*/
         readonly Torso _torso;
         readonly Legs _legs;
 
-        public Minifigure(Head head, Torso torso, Legs legs)
+        public Minifigure(ITalker head, Torso torso, Legs legs)
         {
             _head = head;
             _torso = torso;
